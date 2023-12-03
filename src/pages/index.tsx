@@ -16,7 +16,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
-export default function CallToActionWithVideo() {
+export default function CallToAction() {
   return (
     <Container maxW={'7xl'}>
       <Stack
@@ -94,10 +94,9 @@ export default function CallToActionWithVideo() {
             width={'full'}
             overflow={'hidden'}>
             <IconButton
-              aria-label={'Play Button'}
+              aria-label={''}
               variant={'ghost'}
               _hover={{ bg: 'transparent' }}
-              icon={<PlayIcon w={12} h={12} />}
               size={'lg'}
               color={'white'}
               position={'absolute'}
@@ -110,9 +109,9 @@ export default function CallToActionWithVideo() {
               fit={'cover'}
               align={'center'}
               w={'100%'}
-              h={'100%'}
+              h={'130%'}
               src={
-                '/public/KEBBI STATE MINISTRY OF DIGITAL ECONOMY.png'
+                'https://cdn.vanguardngr.com/wp-content/uploads/2023/04/Kebbi-.jpg'
               }
             />
           </Box>
