@@ -1,4 +1,5 @@
 import { Image, Heading, HStack } from "@chakra-ui/react";
+import NextChakraLink from "./nextChakraLink";
 
 export default function Main() {
 	return (
@@ -13,11 +14,18 @@ export default function Main() {
 			<Image 
     		src="/digital economy logo.png"
        	    alt="Logo" 
-        	boxSize="60px"
+        	boxSize="120px"
 			borderRadius="full"
        />
-			<Heading>KBMODE</Heading>
-			
-		</HStack>
+			<NextChakraLink href="/">
+				<Heading>KBMODE</Heading>
+			</NextChakraLink>
+
+			 {/* <HStack> */}
+   				{/* <NextChakraLink href="/login">Login</NextChakraLink> */}
+   				{/* <NextChakraLink href="/contact">Contact Us</NextChakraLink>   */}
+		     {/* </HStack> */}
+
+		</HStack>	
 	);
 }

@@ -15,6 +15,7 @@ import {
   IconProps,
   useColorModeValue,
 } from '@chakra-ui/react'
+import NextChakraLink from '@components/nextChakraLink'
 
 export default function CallToAction() {
   return (
@@ -51,6 +52,7 @@ export default function CallToAction() {
           </Heading>
           
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
+           <NextChakraLink href="/registration">
             <Button
               rounded={'full'}
               size={'lg'}
@@ -59,14 +61,15 @@ export default function CallToAction() {
               colorScheme={'green'}
               bg={'green.400'}
               _hover={{ bg: 'green.500' }}>
-              Register
+              Click to Register
             </Button>
+          </NextChakraLink>
             <Button
               rounded={'full'}
               size={'lg'}
               fontWeight={'normal'}
               px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
+              leftIcon={<PlayIcon h={4} w={4} color={'gray.400'} />}>
               How It Works
             </Button>
           </Stack>
@@ -144,3 +147,6 @@ const Blob = (props: IconProps) => {
     </Icon>
   )
 }
+
+
+

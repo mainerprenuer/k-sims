@@ -9,6 +9,7 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  VStack,
 } from '@chakra-ui/react'
 import { FaTwitter } from 'react-icons/fa'
 import { ReactNode } from 'react'
@@ -69,15 +70,10 @@ export default function SmallWithLogoLeft() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
         <Logo />
-        
-    <Text fontSize="sm">
-        Kebbi State Ministry Of Digital Economy 
-      <Text as="span" fontWeight="600" mt="2">
-    © 2023 Powered By Micon
-    </Text>
-  </Text>  
-
-
+  <VStack direction="column">
+          <Text>Kebbi State Ministry Of Digital Economy</Text>
+          <Text as="span" fontWeight="600">© 2023 Powered By Micon</Text>
+  </VStack>
 
 <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
