@@ -270,7 +270,7 @@ export default function Registration() {
         p={6}
         m="10px auto"
         as="form">
-        <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
+        <Progress hasStripe value={progress} mb="5%" mx="5%" colorScheme="green" isAnimated></Progress>
         {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : step === 3 ? <Form3 /> : step === 4 ? <Form4 /> : <Form5 /> }
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
@@ -281,7 +281,7 @@ export default function Registration() {
                   setProgress(progress - 22.22)
                 }}
                 isDisabled={step === 1}
-                colorScheme="teal"
+                colorScheme="green"
                 variant="solid"
                 w="7rem"
                 mr="5%">
@@ -298,7 +298,7 @@ export default function Registration() {
                     setProgress(progress + 22.22)
                   }
                 }}
-                colorScheme="teal"
+                colorScheme="green"
                 variant="outline">
                 Next
               </Button>
@@ -311,7 +311,7 @@ export default function Registration() {
                 onClick={() => {
                   toast({
                     title: 'Account created.',
-                    description: "We've created your account for you.",
+                    description: "You've Registered Sucessfully.",
                     status: 'success',
                     duration: 3000,
                     isClosable: true,

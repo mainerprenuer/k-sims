@@ -43,7 +43,7 @@ export default function CallToAction() {
                 bg: 'green.400',
                 zIndex: -1,
               }}>
-              Kebbi State Student's,
+              Kebbi State Students'
             </Text>
             <br />
             <Text as={'span'} color={'green.400'}>
