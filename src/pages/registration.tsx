@@ -18,6 +18,11 @@ import {
   InputGroup,
   Textarea,
   FormHelperText,
+  NumberInputField,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInput,
+  NumberInputStepper,
 } from '@chakra-ui/react'
 import { useToast } from '@chakra-ui/react'
 
@@ -29,7 +34,7 @@ const Form1 = () => {
       Student Bio Data
       </Heading>
       <Flex>
-        <FormControl mr="5%">
+        <FormControl mr="5%" isRequired>
           <FormLabel htmlFor="sur-name" fontWeight={'normal'}>
             Surname
           </FormLabel>
@@ -51,7 +56,7 @@ const Form1 = () => {
         </FormControl>
       </Flex>
       <Flex>
-      <FormControl mt="2%" mr="2">
+      <FormControl mt="2%" mr="2" isRequired>
         <FormLabel htmlFor="email" fontWeight={'normal'}>
           Email Address
         </FormLabel>
@@ -59,23 +64,23 @@ const Form1 = () => {
         <FormHelperText>We&apos;ll never share your email.</FormHelperText>
       </FormControl>
 
-      <FormControl mt="2%" ml="2">
+      <FormControl mt="2%" ml="2" isRequired>
         <FormLabel htmlFor="phone-number" fontWeight={'normal'}>
           Phone Number
         </FormLabel>
-        <Input id="phone" type="tel" placeholder="phone number" required />
+        <Input id="phone" type="tel" placeholder="phone number" />
         <FormHelperText>We&apos;ll never share your phone number.</FormHelperText>
       </FormControl>
       </Flex>
 
-      <FormControl>
+      <FormControl isRequired>
         <FormLabel htmlFor="nin" fontWeight={'normal'} mt="2%">
           NIN Number
         </FormLabel>
-        <Input id="nin" type="nin" placeholder="nin number" required />
+        <Input id="nin" type="nin" placeholder="nin number" />
       </FormControl>
 
-      <FormControl>
+      <FormControl isRequired>
         <FormLabel htmlFor="dob" fontWeight={'normal'} mt="2%">
          Date Of Birth
         </FormLabel>
@@ -86,136 +91,52 @@ const Form1 = () => {
 }
 
 const Form2 = () => {
+
   return (
     <>
       <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
-        User Details
+      Local Government Information
       </Heading>
-      <FormControl as={GridItem} colSpan={[6, 3]}>
-        <FormLabel
-          htmlFor="country"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: 'gray.50',
-          }}>
-          Country / Region
-        </FormLabel>
-        <Select
-          id="country"
-          name="country"
-          autoComplete="country"
-          placeholder="Select option"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md">
-          <option>United States</option>
-          <option>Canada</option>
-          <option>Mexico</option>
+      <FormControl isRequired>
+        <FormLabel>Local Governments</FormLabel>
+          <Select placeholder='Select LGA'>
+           <option>Aleiro</option>
+           <option>Arewa Dandi</option>
+           <option>Argungu</option>
+           <option>Aleiro</option>
+           <option>Augie</option>
+           <option>Bagudo</option>
+           <option>Birnin Kebbi</option>
+           <option>Bunza</option>
+           <option>Dandi</option>
+           <option>Fakai</option>
+           <option>Gwandu</option>
+           <option>Jega</option>
+           <option>Kalgo</option>
+           <option>Koko/Besse</option>
+           <option>Maiyama</option>
+           <option>Ngaski</option>
+           <option>Sakaba</option>
+           <option>Shanga</option>
+           <option>Suru</option>
+           <option>Danko/Wasagu</option>
+           <option>Yauri</option>
+           <option>Zuru</option>
+          </Select>
+      </FormControl>
+      <FormControl mt="2%" isRequired>
+       <FormLabel>Wards</FormLabel>
+        <Select placeholder='Select Ward'>
+          <option></option>
+          <option></option>
         </Select>
       </FormControl>
-
-      <FormControl as={GridItem} colSpan={6}>
-        <FormLabel
-          htmlFor="street_address"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: 'gray.50',
-          }}
-          mt="2%">
-          Street address
-        </FormLabel>
-        <Input
-          type="text"
-          name="street_address"
-          id="street_address"
-          autoComplete="street-address"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
-
-      <FormControl as={GridItem} colSpan={[6, 6, null, 2]}>
-        <FormLabel
-          htmlFor="city"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: 'gray.50',
-          }}
-          mt="2%">
-          City
-        </FormLabel>
-        <Input
-          type="text"
-          name="city"
-          id="city"
-          autoComplete="city"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
-
-      <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
-        <FormLabel
-          htmlFor="state"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: 'gray.50',
-          }}
-          mt="2%">
-          State / Province
-        </FormLabel>
-        <Input
-          type="text"
-          name="state"
-          id="state"
-          autoComplete="state"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
-
-      <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
-        <FormLabel
-          htmlFor="postal_code"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: 'gray.50',
-          }}
-          mt="2%">
-          ZIP / Postal
-        </FormLabel>
-        <Input
-          type="text"
-          name="postal_code"
-          id="postal_code"
-          autoComplete="postal-code"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
+      <FormControl mt="2%" isRequired>
+     <FormLabel>Pollint Units</FormLabel>
+      <Select placeholder='Select polling unit'>
+        <option></option>
+        <option></option>
+      </Select>
       </FormControl>
     </>
   )
@@ -224,71 +145,101 @@ const Form2 = () => {
 const Form3 = () => {
   return (
     <>
-      <Heading w="100%" textAlign={'center'} fontWeight="normal">
-        Social Handles
+      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+        Country Of Study
       </Heading>
-      <SimpleGrid columns={1} spacing={6}>
-        <FormControl as={GridItem} colSpan={[3, 2]}>
-          <FormLabel
-            fontSize="sm"
-            fontWeight="md"
-            color="gray.700"
-            _dark={{
-              color: 'gray.50',
-            }}>
-            Website
-          </FormLabel>
-          <InputGroup size="sm">
-            <InputLeftAddon
-              bg="gray.50"
-              _dark={{
-                bg: 'gray.800',
-              }}
-              color="gray.500"
-              rounded="md">
-              http://
-            </InputLeftAddon>
-            <Input
-              type="tel"
-              placeholder="www.example.com"
-              focusBorderColor="brand.400"
-              rounded="md"
-            />
-          </InputGroup>
-        </FormControl>
+      <FormControl>
+        <FormLabel>Country/Region</FormLabel>
+         <Select placeholder='Select country'>
+           <option>India</option>
+           <option>Sudan</option>
+           <option>Egypt</option>
+         </Select>
+      </FormControl>
 
-        <FormControl id="email" mt={1}>
-          <FormLabel
-            fontSize="sm"
-            fontWeight="md"
-            color="gray.700"
-            _dark={{
-              color: 'gray.50',
-            }}>
-            About
-          </FormLabel>
-          <Textarea
-            placeholder="you@example.com"
-            rows={3}
-            shadow="sm"
-            focusBorderColor="brand.400"
-            fontSize={{
-              sm: 'sm',
-            }}
-          />
-          <FormHelperText>
-            Brief description for your profile. URLs are hyperlinked.
-          </FormHelperText>
-        </FormControl>
-      </SimpleGrid>
+      <FormControl mt="2%">
+        <FormLabel>State of study</FormLabel>
+          <Select placeholder='Select state'>
+           <option></option>
+           <option></option>
+          </Select>
+      </FormControl>
+
+      <FormControl mt="2%">
+        <FormLabel>City of study</FormLabel>
+         <Select placeholder='Select city'>
+           <option></option>
+           <option></option>
+         </Select>
+      </FormControl>
     </>
   )
 }
 
+const Form4 = () => {
+  return (
+    <>
+      <Heading w="100%" textAlign={'center'} fontWeight="normal">
+        Institution Details
+      </Heading>
+
+      <FormControl mb="2%" isRequired>
+        <FormLabel>Name Of Institution</FormLabel>
+          <Input placeholder='Institution name' />
+      </FormControl>
+
+      <FormControl isRequired>
+        <FormLabel>Faculty</FormLabel>
+          <Select placeholder='Select Faculty'>
+            <option>Science</option>
+            <option>Art</option>
+          </Select>
+      </FormControl>
+
+      <FormControl mt="2%" isRequired>
+        <FormLabel>Course of Study</FormLabel>
+         <Select placeholder='Select Course'>
+          <option>Computer Science</option>
+          <option>Medicine</option>
+          <option>Law</option>
+        </Select>
+      </FormControl>
+      
+      <FormControl mt="2%" isRequired>
+        <FormLabel>Select Level</FormLabel>
+          <NumberInput max={600} min={100}>
+           <NumberInputField />
+             <NumberInputStepper>
+             <NumberIncrementStepper />
+             <NumberDecrementStepper />
+           </NumberInputStepper>
+          </NumberInput>
+      </FormControl>
+    </>
+  )
+}
+
+const Form5 = () => {
+  return (
+    <>
+      <Heading w="100%" textAlign={'center'} fontWeight="normal">
+         Image Uploads
+      </Heading>
+
+      <FormControl mb="2%" isRequired>
+        <FormLabel>Passport Image</FormLabel>
+
+      </FormControl>
+    </>
+  )
+}
+
+
+
 export default function Registration() {
   const toast = useToast()
   const [step, setStep] = useState(1)
-  const [progress, setProgress] = useState(33.33)
+  const [progress, setProgress] = useState(22.22)
 
   return (
     <>
@@ -301,14 +252,14 @@ export default function Registration() {
         m="10px auto"
         as="form">
         <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
-        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
+        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : step === 3 ? <Form3 /> : step === 4 ? <Form4 /> : <Form5 /> }
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
             <Flex>
               <Button
                 onClick={() => {
                   setStep(step - 1)
-                  setProgress(progress - 33.33)
+                  setProgress(progress - 22.22)
                 }}
                 isDisabled={step === 1}
                 colorScheme="teal"
@@ -319,13 +270,13 @@ export default function Registration() {
               </Button>
               <Button
                 w="7rem"
-                isDisabled={step === 3}
+                isDisabled={step === 5}
                 onClick={() => {
                   setStep(step + 1)
-                  if (step === 3) {
+                  if (step === 5) {
                     setProgress(100)
                   } else {
-                    setProgress(progress + 33.33)
+                    setProgress(progress + 22.22)
                   }
                 }}
                 colorScheme="teal"
@@ -333,7 +284,7 @@ export default function Registration() {
                 Next
               </Button>
             </Flex>
-            {step === 3 ? (
+            {step === 5 ? (
               <Button
                 w="7rem"
                 colorScheme="red"
