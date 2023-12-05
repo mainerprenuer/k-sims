@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import {
   Progress,
   Box,
@@ -220,21 +220,45 @@ const Form4 = () => {
 }
 
 const Form5 = () => {
+  function handleImageChange(event: ChangeEvent<HTMLInputElement>): void {
+    throw new Error('Function not implemented.')
+  }
+
   return (
     <>
       <Heading w="100%" textAlign={'center'} fontWeight="normal">
          Image Uploads
       </Heading>
 
-      <FormControl mb="2%" isRequired>
+      <FormControl mb="4%" isRequired>
         <FormLabel>Passport Image</FormLabel>
+        <label>
+          <input type="file" onChange={handleImageChange} style={{ display: 'none' }}>
+          </input>
+           <Button as="span">Upload File</Button>
+        </label>
+      </FormControl>
 
+      <FormControl mb="4%" isRequired>
+        <FormLabel>Admission Letter Image</FormLabel>
+          <label>
+            <input type="file" onChange={handleImageChange} style={{ display: 'none' }}>
+            </input>
+             <Button as="span">Upload File</Button>
+          </label>
+      </FormControl>
+
+      <FormControl mb="2%" isRequired>
+        <FormLabel>ID Card Image</FormLabel>
+        <label>
+          <input type="file" onChange={handleImageChange} style={{ display: 'none' }}>
+          </input>
+           <Button as="span">Upload File</Button>
+        </label>
       </FormControl>
     </>
   )
 }
-
-
 
 export default function Registration() {
   const toast = useToast()
