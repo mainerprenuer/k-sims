@@ -9,14 +9,9 @@ import {
   Heading,
   Flex,
   FormControl,
-  GridItem,
   FormLabel,
   Input,
   Select,
-  SimpleGrid,
-  InputLeftAddon,
-  InputGroup,
-  Textarea,
   FormHelperText,
   NumberInputField,
   NumberDecrementStepper,
@@ -220,7 +215,7 @@ const Form4 = () => {
 }
 
 const Form5 = () => {
-  function handleImageChange(event: ChangeEvent<HTMLInputElement>): void {
+  function handleImageChange(_event: ChangeEvent<HTMLInputElement>): void {
     throw new Error('Function not implemented.')
   }
 
