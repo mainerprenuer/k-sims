@@ -228,7 +228,7 @@ const Form5 = () => {
       <FormControl mb="4%" isRequired>
         <FormLabel>Passport Image</FormLabel>
         <label>
-          <input type="file" onChange={handleImageChange} style={{ display: 'none' }}>
+          <input type="file" color="white" onChange={handleImageChange} style={{ display: 'none' }}>
           </input>
            <Button as="span">Upload File</Button>
         </label>
