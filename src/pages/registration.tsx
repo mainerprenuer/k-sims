@@ -92,7 +92,7 @@ const Form2 = () => {
       <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
       Local Government Information
       </Heading>
-      <FormControl isRequired>
+      <FormControl colorScheme="green" isRequired>
         <FormLabel>Local Governments</FormLabel>
           <Select placeholder='Select LGA'>
            <option>Aleiro</option>
@@ -228,7 +228,7 @@ const Form5 = () => {
       <FormControl mb="4%" isRequired>
         <FormLabel>Passport Image</FormLabel>
         <label>
-          <input type="file" color="white" onChange={handleImageChange} style={{ display: 'none' }}>
+          <input type="file" color="green" onChange={handleImageChange} style={{ display: 'none' }}>
           </input>
            <Button as="span">Upload File</Button>
         </label>
@@ -265,7 +265,7 @@ export default function Registration() {
       <Box
         borderWidth="1px"
         rounded="lg"
-        shadow="1px 1px 3px rgba(0,0,0,0.3)"
+        shadow="1px 1px 3px rgba(0,255,0,0.3)"
         maxWidth={800}
         p={6}
         m="10px auto"
@@ -308,6 +308,7 @@ export default function Registration() {
                 w="7rem"
                 colorScheme="red"
                 variant="solid"
+                // onSubmit={}
                 onClick={() => {
                   toast({
                     title: 'Account created.',
