@@ -14,6 +14,8 @@ import {
   createIcon,
   IconProps,
   useColorModeValue,
+  Divider,
+  Center,
 } from '@chakra-ui/react'
 import NextChakraLink from '@components/nextChakraLink'
 
@@ -64,14 +66,14 @@ export default function CallToAction() {
               Click to Register
             </Button>
           </NextChakraLink>
-            <Button
+            {/* <Button
               rounded={'full'}
               size={'lg'}
               fontWeight={'normal'}
               px={6}
               leftIcon={<PlayIcon h={4} w={4} color={'gray.400'} />}>
               How It Works
-            </Button>
+            </Button> */}
           </Stack>
         </Stack>
         <Flex
@@ -120,6 +122,10 @@ export default function CallToAction() {
           </Box>
         </Flex>
       </Stack>
+      
+      <Center height='100px'>
+        <Divider orientation='horizontal' />
+      </Center>
 
       <Stack
         align={'center'}
