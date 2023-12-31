@@ -154,9 +154,20 @@ export default function CallToAction() {
           </Heading>
           
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-            <Text as={'span'} color={'white.400'}>
-            What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          <Text as={'span'} color={'white.400'}>
+            This platform aligns perfectly with the Ministry's vision of promoting digital literacy by offering students convenient access to academic resources and streamlining administrative tasks for educators. 
+            <br/><br/>
+            By bridging the digital divide and empowering Kebbi state's youth through education, we can lay the foundation for a brighter future. Imagine parents receiving real-time updates on their children's progress and educators spending less time on paperwork and more time on personalized learning. That's the transformative potential of the Kebbi Students' Management System.
+            <br/><br/>
+            We invite you to join us in making this vision a reality.
+            <br/><br/><br/>
+              <Text as="span" fontWeight="700">
+                - Hon. Ibrahim M. Muhammad
+              <br/>
+              Commissioner, Ministry of Digital Economy,
+              <br/>
+              Kebbi State.
+              </Text>
             </Text>
           </Stack>
         </Stack>
