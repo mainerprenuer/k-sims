@@ -6,13 +6,8 @@ Proper Readme will follow
 - Typescript
 - ChakraUI
 - NextJS
-- Lightweight
-- Google Analytics
-- React Icons
-## Setup
 
-Click use this template or clone with
-`git clone https://github.com/mainerprenuer/k-sims`
+## Setup
 
 install dependencies `npm i` or `yarn`
 
