@@ -53,7 +53,7 @@ export default function CallToAction() {
           </Heading>
           
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-           <NextChakraLink href="https://dashboard.kebbistudentsmanagement.org/dashboard/students/add">
+           <NextChakraLink href="https://forms.gle/9ovbwrvM8cyW4Hwu8">
             <Button
               rounded={'full'}
               size={'lg'}
