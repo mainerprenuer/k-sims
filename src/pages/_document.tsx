@@ -26,7 +26,7 @@ export default function Document() {
             cardType: "summary_large_image",
           }}
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
 
         <script
           async
