@@ -26,7 +26,7 @@ export default function Document() {
             cardType: "summary_large_image",
           }}
         />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/digital economy logo.png" />
 
         <script
           async
