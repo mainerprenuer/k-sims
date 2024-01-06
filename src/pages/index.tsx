@@ -17,8 +17,17 @@ import {
   Center,
 } from '@chakra-ui/react'
 import NextChakraLink from '@components/nextChakraLink'
+import { useRouter } from 'next/router';
+
 
 export default function CallToAction() {
+
+    const router = useRouter();
+  
+    const handleClick = () => {
+      router.push('/verification'); // go to verification
+    };
+
   return (
     <Container maxW={'7xl'}>
       <Stack
@@ -65,14 +74,18 @@ export default function CallToAction() {
               Click to Register
             </Button>
           </NextChakraLink>
-            {/* <Button
+            <Button
               rounded={'full'}
               size={'lg'}
               fontWeight={'normal'}
               px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.400'} />}>
-              How It Works
-            </Button> */}
+              onClick={handleClick}
+              colorScheme={'green'}
+              bg={'gray.600'}
+              _hover={{ bg: 'gray.500' }}
+               >
+              View Dashboard
+            </Button>
           </Stack>
         </Stack>
         <Flex
