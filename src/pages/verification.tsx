@@ -18,7 +18,7 @@ const Verification = () => {
           })
 
       // Redirect to the dashboard
-      window.location.href = "https://google.com"; 
+      window.location.href = "https://k-sims-dashboard.vercel.app/dashboard/students"; 
     } 
 
    return ( 
